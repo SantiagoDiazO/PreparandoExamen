@@ -1,32 +1,23 @@
 from Escuderia import Escuderia
 
-escuderias = []
+escuderias=[]
 
-opcionEscuderia = 0
+numeroEscuderia=0
+sumatoriaSalarios=0
 
-sumatoriaSalarios = 0
-
-while (opcionEscuderia < 2):
-    escuderia = Escuderia()
-    escuderia.nombre = input("Ingrese el nombre de la escudería: ")
-    escuderia.motor = input("Ingrese el motor de la escudería: ")
-    escuderia.costoAnual = int(input("Ingrese el costo anual: "))
-    # escuderia.piloto1.nombre = input("Ingrese el nombre del piloto 1: ")    
+while(numeroEscuderia<2):
+    escuderia=Escuderia()
+    escuderia.nombre=input("Digite el nombre de la escuderia: ")
+    escuderia.motor=input("Digite el motor de la escuderia: ")
+    escuderia.costoAnual=input("Digite el costo anual: ")
+    escuderia.piloto1.salarioAnual=int(input("Digita el salario del piloto1: "))
+    escuderia.piloto2.salarioAnual=int(input("Digita el salario del piloto2: "))
     
-    escuderia.piloto1.salarioAnual = int(input("Ingrese el salario del piloto 1: "))
-    escuderia.piloto2.salarioAnual = int(input("Ingrese el salario del piloto 2: "))
+    escuderias.append(escuderia) #agregar la escuderia a la lista
+    numeroEscuderia+=1
     
-    
-    
-    # Metodo Append
-    
-    escuderias.append(escuderia)  
-    
-    opcionEscuderia +=1
-    
-# for escuderia in escuderias:
-#     print(f"{escuderia.nombre}")
-    
+#recorrer la lista de esciderias
 for escuderia in escuderias:
-    sumatoriaSalarios = sumatoriaSalarios + escuderia.piloto1.salarioAnual + escuderia.piloto2.salarioAnual 
-print(f'la sumatoria de salarios es: {sumatoriaSalarios}')
+    #print(f"{escuderia.nombre}")
+    sumatoriaSalarios=sumatoriaSalarios+escuderia.piloto1.salarioAnual+escuderia.piloto2.salarioAnual
+    print(f"El salario acumulado fue: {sumatoriaSalarios}")
