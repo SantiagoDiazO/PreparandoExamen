@@ -1,4 +1,5 @@
 from Piloto import Piloto
+
 class Escuderia:
     def __init__(self):
         self.__nombre=None
